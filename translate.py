@@ -55,9 +55,10 @@ if __name__ == "__main__":
         print("Usage: python translate.py <source_file> <output_lang>")
         sys.exit(1)
     source_po_path = sys.argv[1]
-    filename = os.path.basename(source_po_path)
-
+    os.path.dirname(source_po_path)
+    directory_path, filename = os.path.split(source_po_path)
+    directory_path_no_locale = directory_path.rsplit('/', 1)[0]
     target_language = sys.argv[2]
-    target_po_path = target_language + "/" + filename
+    target_po_path =  directory_path_no_locale + "/" + target_language + "/" + filename
     is_valid_language(target_language)
     translate_po_file(source_po_path, target_po_path, target_language)
