@@ -1,0 +1,57 @@
+#
+msgid ""
+msgstr "Language: ru\n"
+
+msgid "admin.fileLoader.moveFileFailed"
+msgstr ""
+"Файл {$ filename} не может быть перенесен из {$ currentFilePath} в {$ "
+"destinationPath}"
+
+msgid "admin.fileLoader.fileProcessed"
+msgstr "Файл {$ filename} был обработан и архив."
+
+msgid "admin.fileLoader.emailSubject"
+msgstr "Файл загрузчик"
+
+msgid "admin.copyAccessLogFileTool.usage"
+msgstr ""
+"Скопируйте пройденные файлы журнала Apache Access, фильтрацию записей, связанных с этой установкой,\n"
+"В текущий каталог файлов, внутри каталога сценического каталога USAGeStatsPlugin.Необходимо запустить под пользователем с достаточными привилегиями для чтения файлов журнала Apach Apach.\n"
+"\n"
+"Этот инструмент будет копировать только файлы, которые еще не находятся в каталогах USAGeStats File Loader (этап, обработка, архив, отклонение).\n"
+"\n"
+"Использование: {$ scriptName} path/to/apache/log/file.log\n"
+"Использование (обработка всех файлов в каталоге): {$ scriptName} path/to/apache/каталог"
+
+msgid "admin.copyAccessLogFileTool.error.creatingFolder"
+msgstr "Ошибка: не может создать временную папку {$ tmpdir}"
+
+msgid "admin.copyAccessLogFileTool.error.acessingFile"
+msgstr "Ошибка: файл {$ filePath} не существует или не может быть получена."
+
+msgid "admin.copyAccessLogFileTool.error.copyingFile"
+msgstr ""
+"Ошибка: не может скопировать файл из {$ file path} до {$ tmp pail path}"
+
+msgid "admin.copyAccessLogFileTool.error.deletingFile"
+msgstr "Ошибка: не удается удалить файл {$ tmpfilepath}"
+
+msgid "admin.copyAccessLogFileTool.warning.fileAlreadyExists"
+msgstr ""
+"Предупреждение: файл {$ filePath} уже существует в каталоге статистики "
+"использования."
+
+msgid "admin.copyAccessLogFileTool.success"
+msgstr "Успех: {$ filePath} to {$ destinationPath}"
+
+msgid "admin.error.utilExecutionProblem"
+msgstr ""
+"Выполнение программы «{$ utilpath}» вернуло следующую ошибку: {$ output}"
+
+msgid "admin.error.executingUtil"
+msgstr ""
+"Ошибка: не может выполнить \"{$ utilpath}\".Проверьте настройку {$ utilvar} "
+"в config.inc.php."
+
+msgid "admin.languages.noLocalesToDownload"
+msgstr "Там нет локалов, доступных для загрузки."

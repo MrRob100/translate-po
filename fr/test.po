@@ -1,0 +1,59 @@
+#
+msgid ""
+msgstr "Language: fr\n"
+
+msgid "admin.fileLoader.moveFileFailed"
+msgstr ""
+"Le fichier {$ filename} n'a pas pu être déplacé de {$ currentFilePath} à {$ "
+"DestinationPath}"
+
+msgid "admin.fileLoader.fileProcessed"
+msgstr "Le fichier {$ filename} a été traité et archivé."
+
+msgid "admin.fileLoader.emailSubject"
+msgstr "Chargeur de fichiers"
+
+msgid "admin.copyAccessLogFileTool.usage"
+msgstr ""
+"Copiez le ou les fichiers journaux d'accès Apache passés, en filtrant les entrées liées à cette installation,\n"
+"au répertoire de fichiers actuel, à l'intérieur du répertoire de scène Usagestatsplugin.Doit s'exécuter sous l'utilisateur avec suffisamment de privilèges pour lire les fichiers journaux d'accès Apache.\n"
+"\n"
+"Cet outil ne copiera que les fichiers qui ne sont pas déjà dans les répertoires de chargeur de fichiers USAGESTATS (étape, traitement, archiver, rejeter).\n"
+"\n"
+"Utilisation: {$ scriptname} path / to / apache / log / file.log\n"
+"Utilisation (traitement de tous les fichiers dans un répertoire): {$ scriptname} path / to / apache / répertoire"
+
+msgid "admin.copyAccessLogFileTool.error.creatingFolder"
+msgstr "Erreur: Impossible de créer un dossier temporaire {$ tmpdir}"
+
+msgid "admin.copyAccessLogFileTool.error.acessingFile"
+msgstr "Erreur: le fichier {$ filepath} n'existe pas ou n'est pas accessible."
+
+msgid "admin.copyAccessLogFileTool.error.copyingFile"
+msgstr ""
+"Erreur: Impossible de copier le fichier de {$ un chemin de fichier} vers {$ "
+"TMP File Path}"
+
+msgid "admin.copyAccessLogFileTool.error.deletingFile"
+msgstr "Erreur: Impossible de supprimer le fichier {$ tmpfilepath}"
+
+msgid "admin.copyAccessLogFileTool.warning.fileAlreadyExists"
+msgstr ""
+"AVERTISSEMENT: le fichier {$ filepath} existe déjà dans le répertoire des "
+"statistiques d'utilisation."
+
+msgid "admin.copyAccessLogFileTool.success"
+msgstr "Succès: {$ filepath} à {$ DestinationPath}"
+
+msgid "admin.error.utilExecutionProblem"
+msgstr ""
+"L'exécution du programme \"{$ utilpath}\" a renvoyé l'erreur suivante: {$ "
+"output}"
+
+msgid "admin.error.executingUtil"
+msgstr ""
+"Erreur: Impossible d'exécuter \"{$ utilpath}\".Vérifiez votre paramètre {$ "
+"utilvar} dans config.inc.php."
+
+msgid "admin.languages.noLocalesToDownload"
+msgstr "Il n'y a pas de lieux disponibles en téléchargement."

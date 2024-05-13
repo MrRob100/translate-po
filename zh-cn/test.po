@@ -1,0 +1,49 @@
+#
+msgid ""
+msgstr "Language: zh-cn\n"
+
+msgid "admin.fileLoader.moveFileFailed"
+msgstr "文件{$ filename}无法从{$ currentfilepath}移动到{$ destinatyPath}"
+
+msgid "admin.fileLoader.fileProcessed"
+msgstr "文件{$ filename}已处理和存档。"
+
+msgid "admin.fileLoader.emailSubject"
+msgstr "文件加载程序"
+
+msgid "admin.copyAccessLogFileTool.usage"
+msgstr ""
+"复制传递的Apache访问日志文件，过滤与此安装相关的条目，\n"
+"到当前文件目录，在USAGESTATSPLUGIN阶段目录内。必须在用户下运行足够的特权来读取Access Apache日志文件。\n"
+"\n"
+"该工具将仅复制尚未在USAGESTATS文件加载程序目录（阶段，处理，存档，拒绝）中的文件。\n"
+"\n"
+"用法：{$ scriptName}路径/to/apache/log/file.log\n"
+"用法（处理目录中的所有文件）：{$ scriptName}路径/to/apache/Directory"
+
+msgid "admin.copyAccessLogFileTool.error.creatingFolder"
+msgstr "错误：无法创建临时文件夹{$ tmpdir}"
+
+msgid "admin.copyAccessLogFileTool.error.acessingFile"
+msgstr "错误：文件{$ filepath}不存在或无法访问。"
+
+msgid "admin.copyAccessLogFileTool.error.copyingFile"
+msgstr "错误：无法将文件从{$ file path}复制到{$ tmp文件路径}"
+
+msgid "admin.copyAccessLogFileTool.error.deletingFile"
+msgstr "错误：无法删除文件{$ tmpfilepath}"
+
+msgid "admin.copyAccessLogFileTool.warning.fileAlreadyExists"
+msgstr "警告：file {$ filepath}在使用统计目录内已经存在。"
+
+msgid "admin.copyAccessLogFileTool.success"
+msgstr "成功：{$ filepath} to {$ destinatePath}"
+
+msgid "admin.error.utilExecutionProblem"
+msgstr "“ {$ UTILPATH}”程序执行返回以下错误：{$ output}"
+
+msgid "admin.error.executingUtil"
+msgstr "错误：无法执行“ {$ UTILPATH}”。在config.inc.php中检查您的{$ UTILVAR}设置。"
+
+msgid "admin.languages.noLocalesToDownload"
+msgstr "没有地方可下载。"

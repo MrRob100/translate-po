@@ -1,0 +1,9 @@
+#
+msgid ""
+msgstr "Language: pt\n"
+
+msgid "admin.systemInfo.settingName"
+msgstr "Nome da configuração"
+
+msgid "admin.systemInfo.settingValue"
+msgstr "Definindo valor"

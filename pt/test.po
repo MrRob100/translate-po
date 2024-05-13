@@ -1,0 +1,58 @@
+#
+msgid ""
+msgstr "Language: pt\n"
+
+msgid "admin.fileLoader.moveFileFailed"
+msgstr ""
+"Arquivo {$ filename} não pôde ser movido de {$ currentFilePath} para {$ "
+"DestinationPath}"
+
+msgid "admin.fileLoader.fileProcessed"
+msgstr "O arquivo {$ filename} foi processado e arquivado."
+
+msgid "admin.fileLoader.emailSubject"
+msgstr "Carregador de arquivos"
+
+msgid "admin.copyAccessLogFileTool.usage"
+msgstr ""
+"Copie o (s) arquivo (s) de log (s) de acesso Apache, filtrando as entradas relacionadas com esta instalação,\n"
+"Para o diretório atual de arquivos, dentro do diretório de estágio USAGESTATATSPLUGIN.Deve ser executado sob o usuário com privilégios suficientes para ler os arquivos de log do Acesso Apache.\n"
+"\n"
+"Essa ferramenta copiará apenas arquivos que ainda não estão dentro dos diretórios do carregador de arquivos do USAGESTAT (estágio, processamento, arquivamento, rejeição).\n"
+"\n"
+"Uso: {$ scriptName} caminho/para/apache/log/file.log\n"
+"Uso (processando todos os arquivos dentro de um diretório): {$ scriptName} Path/to/apache/diretório"
+
+msgid "admin.copyAccessLogFileTool.error.creatingFolder"
+msgstr "Erro: não é possível criar pasta temporária {$ tmpdir}"
+
+msgid "admin.copyAccessLogFileTool.error.acessingFile"
+msgstr "Erro: arquivo {$ filepath} não existe ou não pode ser acessado."
+
+msgid "admin.copyAccessLogFileTool.error.copyingFile"
+msgstr ""
+"Erro: Não é possível copiar o arquivo de {$ File Path} para {$ TMP File "
+"Path}"
+
+msgid "admin.copyAccessLogFileTool.error.deletingFile"
+msgstr "Erro: não é possível excluir o arquivo {$ tmpfilepath}"
+
+msgid "admin.copyAccessLogFileTool.warning.fileAlreadyExists"
+msgstr ""
+"Aviso: o arquivo {$ filepath} já existe dentro do diretório de estatísticas "
+"de uso."
+
+msgid "admin.copyAccessLogFileTool.success"
+msgstr "Sucesso: {$ filepath} para {$ DestinationPath}"
+
+msgid "admin.error.utilExecutionProblem"
+msgstr ""
+"A execução do programa \"{$ utilpath}\" retornou o seguinte erro: {$ output}"
+
+msgid "admin.error.executingUtil"
+msgstr ""
+"ERRO: Não é possível executar \"{$ utilpath}\".Verifique sua configuração {$"
+" utilvar} em config.inc.php."
+
+msgid "admin.languages.noLocalesToDownload"
+msgstr "Não há locais disponíveis para download."
