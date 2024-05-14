@@ -5,10 +5,15 @@ import polib
 from googletrans import Translator
 
 def perform_translation(text, target_language):
-    translator = Translator()
-    translated = translator.translate(text, dest=target_language)
-
-    return translated.text
+    try:
+        text = text[:5000]
+        translator = Translator()
+        translated = translator.translate(text, dest=target_language)
+        return translated.text
+    except Exception as e:
+        print(text + ':')
+        print(e)
+        return ''
 
 
 def translate_po_file(source_po_path, target_language, detail_string = ''):
