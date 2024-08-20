@@ -69,15 +69,22 @@ if __name__ == "__main__":
         source_po_path = sys.argv[1]
         ojs_version = input("OJS version: (eg 3.3 or 3.4. 3.3 uses country explicit locale keys eg 'en_US' whereas 3.4 and above uses just the language eg 'en') ")
         if ojs_version == '3.3':
-            locale_keys_file = 'locales-3-3.json'
+            set = input("Which set of locale keys? 'full' or 'up' ")
+            if set == 'all':
+                locale_keys_file = 'keys/3.3/all.json'
+            elif set == 'up':
+                locale_keys_file = 'keys/3.3/up.json'
         elif ojs_version == '3.4' or '3.5':
-            locale_keys_file = 'locales-3-4.json'
+            set = input("Which set of locale keys? 'full' or 'up' ")
+            if set == 'all':
+                locale_keys_file = 'keys/3.4/all.json'
+            elif set == 'up':
+                locale_keys_file = 'keys/3.4/up.json'
         else:
             print("Error: Invalid input. Please enter 3.3, 3.4, or 3.5.")
             sys.exit(1)
 
-
-        with open("keys/" + locale_keys_file) as f:
+        with open(locale_keys_file) as f:
             data = json.load(f)
             total_keys = len(data)
 
