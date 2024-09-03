@@ -32,10 +32,19 @@ def perform_translation(text, target_language):
         return ''
 
 
-def add_key(source_po_path, target_language, key, string):
+def add_key(source_po_path, target_language, key, string, detail_string = ''):
+    os.path.dirname(source_po_path)
+    directory_path, filename = os.path.split(source_po_path)
+    directory_path_no_locale = directory_path.rsplit('/', 1)[0]
+    target_po_path =  directory_path_no_locale + "/" + target_language + "/" + filename
     if is_valid_language(target_language):
+
+
+
+
         translated_string = perform_translation(string, target_language)
-        po_file = polib.pofile(source_po_path)
+
+        po_file = polib.pofile(target_po_path)
 
         new_entry = polib.POEntry(
             msgid=key,
@@ -43,7 +52,13 @@ def add_key(source_po_path, target_language, key, string):
         )
 
         po_file.append(new_entry)
-        po_file.save(source_po_path)
+        po_file.save(target_po_path)
+
+
+
+        progress_message = f"{detail_string} translated into {target_language} "
+        print(progress_message)
+
 
 
 if __name__ == "__main__":
