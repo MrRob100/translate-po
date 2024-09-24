@@ -21,12 +21,18 @@ A python cli tool to translate existing .po locale files to create localised str
 Translate a .po file into specific locale. Creates the file /path/to/project/locale/pt_BR/locale.po:
 
 ```bash
-./translate.py /path/to/project/locale/en_US/locale.po pt_BR 
+python translate.py /path/to/project/locale/en_US/locale.po pt_BR 
 ```
 
 Translate a .po file into a whole set of locales. Prompts the OJS version (3.3, 3.4 or 3.5) to be entered as the locale 
 sets are different with the later versions having less country specific languages i.e `en` rather than `en_US`
 
 ```bash
-./translate.py /path/to/project/locale/en_US/locale.po 
+python translate.py /path/to/project/locale/en_US/locale.po 
+```
+
+Add a specific key & translated value to all .po files
+
+```bash
+python add_key.py /path/to/project/locale/en_US/locale.po 
 ```
