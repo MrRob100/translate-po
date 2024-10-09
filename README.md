@@ -31,7 +31,7 @@ sets are different with the later versions having less country specific language
 python translate.py /path/to/project/locale/en_US/locale.po 
 ```
 
-Add a specific key & translated value to all .po files
+Add a specific key & translated value to all .po files. If a key already exists it will get overwritten.
 
 ```bash
 python add_key.py /path/to/project/locale/en_US/locale.po 
