@@ -20,6 +20,17 @@ def is_valid_language(target_language):
         return False
 
 
+def validate_po_file(file_path):
+    try:
+        po = polib.pofile(file_path)
+        print("PO file loaded successfully.")
+    except IOError as e:
+        print(f"IOError: {e}")
+    except SyntaxError as e:
+        print(f"SyntaxError: {e}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
 def perform_translation(text, target_language):
     try:
         text = text[:5000]
@@ -31,24 +42,60 @@ def perform_translation(text, target_language):
         print(e)
         return ''
 
+def create_po_file(source_po_path, target_language, target_po_path):
+    source_po = polib.pofile(source_po_path)
+    target_directory = os.path.dirname(target_po_path)
+    if not os.path.exists(target_directory):
+        os.makedirs(target_directory)
+
+    target_po = polib.POFile()
+    target_po.metadata = {
+        'Language': target_language,
+    }
+
+    total_entries = len(source_po)
+    for index, entry in enumerate(source_po):
+        translated_msgstr = perform_translation(entry.msgstr, target_language)
+        new_entry = polib.POEntry(
+            msgid=entry.msgid,
+            msgstr=translated_msgstr
+        )
+
+        target_po.append(new_entry)
+        completion_percentage = (index + 1) / total_entries * 100
+        progress_message = f"{completion_percentage:.2f}% translated into {target_language} "
+        print(progress_message)
+
+    target_po.save(target_po_path)
+
 
 def add_key(source_po_path, target_language, key, string, detail_string = ''):
     os.path.dirname(source_po_path)
     directory_path, filename = os.path.split(source_po_path)
     directory_path_no_locale = directory_path.rsplit('/', 1)[0]
     target_po_path =  directory_path_no_locale + "/" + target_language + "/" + filename
-    if is_valid_language(target_language):
-        translated_string = perform_translation(string, target_language)
-        po_file = polib.pofile(target_po_path)
-        new_entry = polib.POEntry(
-            msgid=key,
-            msgstr=translated_string
-        )
 
-        po_file.append(new_entry)
-        po_file.save(target_po_path)
-        progress_message = f"{detail_string} translated into {target_language} "
-        print(progress_message)
+    if os.path.exists(target_po_path):
+        if is_valid_language(target_language):
+            translated_string = perform_translation(string, target_language)
+            validate_po_file(target_po_path)
+            po_file = polib.pofile(target_po_path)
+            entry = po_file.find(key)
+            if entry:
+                entry.msgstr = translated_string
+            else:
+                new_entry = polib.POEntry(
+                    msgid=key,
+                    msgstr=translated_string
+                )
+                po_file.append(new_entry)
+
+            po_file.save(target_po_path)
+            progress_message = f"{detail_string} translated into {target_language} "
+            print(progress_message)
+    else:
+        print(f"Target file for {target_language} doesnt exist. Adding...")
+        create_po_file(source_po_path, target_language, target_po_path)
 
 
 if __name__ == "__main__":
