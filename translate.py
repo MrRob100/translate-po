@@ -69,7 +69,7 @@ if __name__ == "__main__":
         source_po_path = sys.argv[1]
         ojs_version = input("OJS version: (eg 3.3 or 3.4. 3.3 uses country explicit locale keys eg 'en_US' whereas 3.4 and above uses just the language eg 'en') ")
         if ojs_version == '3.3':
-            set = input("Which set of locale keys? 'full' or 'up' ")
+            set = input("Which set of locale keys? 'all' or 'up' ")
             if set == 'all':
                 locale_keys_file = 'keys/3.3/all.json'
             elif set == 'up':
